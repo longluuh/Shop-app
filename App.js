@@ -1,4 +1,11 @@
-import { StyleSheet, SafeAreaView, Button, Alert } from "react-native";
+import {
+  StyleSheet,
+  SafeAreaView,
+  Button,
+  Alert,
+  Platform,
+  StatusBar,
+} from "react-native";
 
 export default function App() {
   return (
@@ -8,8 +15,8 @@ export default function App() {
         title="click me"
         onPress={() =>
           Alert.alert("my text", "my message", [
-            { text: "Yes", onPress: () => console.log("yes") },
-            { text: "No", onPress: () => console.log("no") },
+            { text: "Yes" },
+            { text: "No" },
           ])
         }
       />
@@ -21,7 +28,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
