@@ -4,10 +4,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("./assets/background.png")}
+        source={require("./app/assets/background.png")}
         style={styles.image}
       >
-        <Image source={require("./assets/logo-red.png")} style={styles.logo} />
+        <Image
+          source={require("./app/assets/logo-red.png")}
+          style={styles.logo}
+        />
         <View style={styles.bottomButton}>
           <Button title="Sign In" color={"#fc5c65"} />
           <Button title="Sign Up" color={"#4ECDC4"} />
