@@ -1,33 +1,25 @@
-import {
-  StyleSheet,
-  SafeAreaView,
-  Button,
-  Alert,
-  Platform,
-  StatusBar,
-} from "react-native";
+import { View } from "react-native";
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Button
-        color="orange"
-        title="click me"
-        onPress={() =>
-          Alert.alert("my text", "my message", [
-            { text: "Yes" },
-            { text: "No" },
-          ])
-        }
+    <View
+      style={{
+        backgroundColor: "#fff",
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <View
+        style={{
+          backgroundColor: "dodgerblue",
+          width: 100,
+          height: 100,
+        }}
       />
-    </SafeAreaView>
+      <View style={{ backgroundColor: "gold", width: 100, height: 100 }} />
+      <View style={{ backgroundColor: "tomato", width: 100, height: 100 }} />
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-});
