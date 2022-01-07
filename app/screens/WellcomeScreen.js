@@ -1,12 +1,5 @@
 import react from "react";
-import {
-  Button,
-  ImageBackground,
-  StyleSheet,
-  View,
-  Image,
-  Text,
-} from "react-native";
+import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 
 function WelcomeScreen() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 
 function ViewImageScreen(props) {
   return (

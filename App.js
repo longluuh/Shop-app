@@ -1,6 +1,13 @@
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import WelcomeScreen from "./app/screens/WellcomeScreen";
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { MainStackNavigator } from "./navigation/StackNavigator";
 
-export default function App() {
-  return <WelcomeScreen />;
-}
+const App = () => {
+  return (
+    <NavigationContainer>
+      <MainStackNavigator />
+    </NavigationContainer>
+  );
+};
+
+export default App;
